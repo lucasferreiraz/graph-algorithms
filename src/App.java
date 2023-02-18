@@ -9,11 +9,24 @@ public class App {
             {0, 0, 0, 1, 0, 1},
             {0, 0, 0, 1, 1, 0}
         };
-        AdjacencyMatrixGenerator.printMatrix(matrix1);
+        AdjacencyMatrixHandler.printMatrix(matrix1);
 
         System.out.println("\nSecond exercise:");
-        int[][] matrix2 = AdjacencyMatrixGenerator.completeGraph(5);
+        int[][] matrix2 = AdjacencyMatrixHandler.completeGraph(5);
         System.out.println("Complete graph with 5 nodes:\n");
-        AdjacencyMatrixGenerator.printMatrix(matrix2);
+        AdjacencyMatrixHandler.printMatrix(matrix2);
+
+        System.out.println("\nThird exercise: \n");
+        int[][] matrix3 = {
+            {0, 1, 0, 0, 1, 0},
+            {-1, 0, 0, 0, 0, 1},
+            {0, 0, 0, 1, -1, 0},
+            {0, 0, -1, 0, 0, -1},
+            {-1, 0, 1, 0, 0, 1},
+            {0, -1, 0, 1, -1, 0}
+        };
+
+        AdjacencyMatrixHandler.nodesDegree(matrix3);
+
     }
 }
