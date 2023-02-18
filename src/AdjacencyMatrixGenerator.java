@@ -28,9 +28,4 @@ public class AdjacencyMatrixGenerator {
         }
     }
 
-    public static void main(String[] args) {
-        int[][] matrix = completeGraph(-5);
-        printMatrix(matrix);
-    }
-
 }
