@@ -36,7 +36,7 @@ public class AdjacencyMatrixHandler {
                 }
 
                 boolean containsInput = nodeDegrees.containsKey(row + " - in");
-                boolean containsOutput = nodeDegrees.containsKey(row + " - output");
+                boolean containsOutput = nodeDegrees.containsKey(row + " - out");
 
                 if (!containsInput)
                     nodeDegrees.put(row + " - in", 0);
