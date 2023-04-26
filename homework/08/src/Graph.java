@@ -12,6 +12,30 @@ public class Graph {
         return true;
     }
 
+    public static boolean isWheel(int[][] graph) {
+        int numVertices = graph.length;
+
+        int countDegreeNMinus1 = 0;
+        int indexDegreeNMinus1 = -1;
+
+        for (int i = 0; i < numVertices; i++) {
+            int degree = countDegree(graph, i);
+
+            if (degree == numVertices - 1) {
+                countDegreeNMinus1++;
+                indexDegreeNMinus1 = i;
+            }
+        }
+
+        if (countDegreeNMinus1 != 1)
+            return false;
+
+        for (int i = 0; i < numVertices; i++)
+            if (i != indexDegreeNMinus1 && countDegree(graph, i) != 2)
+                return false;
+
+        return true;
+    }
     private static int countDegree(int[][] graph, int vertice) {
         int degree = 0;
 
