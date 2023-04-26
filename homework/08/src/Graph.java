@@ -36,6 +36,22 @@ public class Graph {
 
         return true;
     }
+
+    public static int[][] generateIncidenceMatrix(int m, int n) {
+        int[][] IncidenceMatrix = new int[m + n][m * n];
+        
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int column = i * n + j;
+                
+                IncidenceMatrix[i][column] = 1;
+                IncidenceMatrix[m + j][column] = 1;
+            }
+        }
+        
+        return IncidenceMatrix;
+    }
+
     private static int countDegree(int[][] graph, int vertice) {
         int degree = 0;
 
@@ -44,5 +60,14 @@ public class Graph {
                 degree++;
 
         return degree;
+    }
+
+    public static void printMatrix(int[][] matrix) {
+        for (int[] line : matrix) {
+            for (int element : line) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
     }
 }

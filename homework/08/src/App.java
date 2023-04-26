@@ -27,5 +27,12 @@ public class App {
         else
             System.out.println("This isn't a wheel graph.");
 
+        System.out.println("Question 4:");
+
+        int m = 3;
+        int n = 4;
+
+        int matrix[][] = Graph.generateIncidenceMatrix(m, n);
+        Graph.printMatrix(matrix);
     }
 }
